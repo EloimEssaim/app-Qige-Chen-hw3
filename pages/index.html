@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<link rel="stylesheet" type="text/css" href="../styles/index.css" media="screen" />
+<script src="../script/index.js"></script>
+
+<body>
+  <div class="registration-container">
+    <div class="input-item" id="input-item-first-name">
+      <div class="input-description">First Name</div>
+      <input type="text" class="input-box" id="input-first-name" placeholder="First Name"
+        oninput="onFirstNameInput(this)">
+    </div>
+    <div class="input-item" id="input-item-last-name">
+      <div class="input-description">Last Name</div>
+      <input type="text" class="input-box" id="input-last-name" placeholder="Last Name" oninput="onLastNameInput(this)">
+    </div>
+    <div class="input-item" id="input-item-email">
+      <div class="input-description">Email Address</div>
+      <input type="text" class="input-box" id="input-email-address" placeholder="Email Address"
+        oninput="onEmailAddressInput(this)">
+    </div>
+    <div class="input-item" id="input-item-notes">
+      <div class="input-description">Notes</div>
+      <textarea type="text" class="input-box" id="input-notes" oninput="onNotesInput(this)"></textarea>
+    </div>
+    <div class="btn" id="register-btn" onclick="onRegisterClick()">Register</div>
+    <div id="msg"></div>
+  </div>
+</body>
+
+</html>
