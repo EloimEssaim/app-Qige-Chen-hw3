@@ -20,38 +20,24 @@ const onNotesInput = () => {
 const onRegisterClick = () => {
   let msg = document.getElementById("msg");
   if (firstNameValid && lastNameValid && emailValid && notesValid) {
-    msg.innerHTML = "Validation successful"
+    msg.innerHTML = "Validation successful";
     msg.classList.remove("error-msg");
     msg.classList.add("correct-msg");
 
-    let inputBoxes = document.getElementsByTagName("input");
-    inputBoxes.push(document.getElementsByTagName("textarea"));
-    for (inputBox in inputBoxes) {
-      inputBox.classList.remove("err-placeholder");
-    }
   } else {
-    msg.innerHTML = "Check your input again";
     msg.classList.remove("correct-msg");
     msg.classList.add("error-msg");
     if (!firstNameValid) {
-      let firstNameInputBox = document.getElementById("input-first-name");
-      firstNameInputBox.placeholder = "First name cannot be empty";
-      firstNameInputBox.classList.add("err-placeholder");
+      msg.innerHTML = "First name cannot be empty";
     }
     if (!lastNameValid) {
-      let lastNameInputBox = document.getElementById("input-last-name");
-      lastNameInputBox.placeholder = "Last name cannot be empty";
-      lastNameInputBox.classList.add("err-placeholder");
+      msg.innerHTML = "Last name cannot be empty";
     }
     if (!emailValid) {
-      let emailAddressInputBox = document.getElementById("input-email-address");
-      emailAddressInputBox.placeholder = "Email address cannot be empty";
-      emailAddressInputBox.classList.add("err-placeholder");
+      msg.innerHTML = "Email address cannot be empty";
     }
     if (!notesValid) {
-      let notesInputBox = document.getElementById("input-notes");
-      notesInputBox.placeholder = "Notes cannot be empty";
-      notesInputBox.classList.add("err-placeholder");
+      msg.innerHTML = "Notes cannot be empty";
     }
   }
 }
